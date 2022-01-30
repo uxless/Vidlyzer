@@ -1,0 +1,152 @@
+-- CDID Car Driving Indonesia Script
+if game.PlaceId == 6911148748 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+    local Window = Library.CreateLib("Car Driving Indonesia | Vidlyzer Hub ", "Sentinel")
+    local Player = Window:NewTab("Player")
+    local AutoFarm = Window:NewTab("AutoFarm")
+    local Teleport = Window:NewTab("Teleport")
+
+    
+    -- Player
+    local PlayerSection = Player:NewSection("Player")
+    PlayerSection:NewButton("Fly", "Click E to fly", function(v)
+        print("Clicked")
+    end)
+    PlayerSection:NewButton("Noclip", "Click N to fly", function(v)
+        print("Clicked")
+    end)
+    PlayerSection:NewSlider("WalkSpeed", "Change WalkSpeed", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+    PlayerSection:NewSlider("JumpPower", "Change JumpPower", 500, 16, function(s) -- 500 (MaxValue) | 0 (MinValue)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    
+    -- AutoFarm
+    local AutoFarmSection = AutoFarm:NewSection("AutoFarm")
+    AutoFarmSection:NewToggle("Office", "Office Autofarm", function(v)
+        getgenv().autoofice = v
+        while true do
+            if not getgenv().autoofice then return end
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-23014, 263, 6266)
+            wait(13)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-23124, 263, 6278)
+            wait(1)
+        end
+    end)
+    AutoFarmSection:NewToggle("Janji Jawa", "Janji Jawa Autofarm", function(a)
+        getgenv().autojj = a
+        while true do
+            if not getgenv().autojj then return end
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-22775, 25, 15434)
+            wait(13)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-22784, 25, 15403)
+        end
+    end)
+
+
+    -- Teleport
+    local TeleportSection = Teleport:NewSection("Tp To Player")
+    TeleportSection:NewTextBox("Username", "Enter player name", function(v)
+        getgenv().tp = v
+        while true do
+            if not getgenv().tp then return end
+            game.Players.LocalPlayer.Character.HumanoidRootPart
+            p1.CFrame = game.Players(v).Character.HumanoidRootPart.CFrame
+        
+    end)
+    
+    local TeleportSection = Teleport:NewSection("Location")
+    TeleportSection:NewButton("Spawn", "Tp to spawn", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25388.7, 23.0737, 8786.72)
+    end)
+    TeleportSection:NewButton("Job", "Tp to Job Changer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25204.9, 23.0693, 8620.61)
+    end)
+    TeleportSection:NewButton("SiLambat", "Tp to SiLambat", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25633.1, 21.7521, 8997.42)
+    end)
+    TeleportSection:NewButton("Puncak", "Tp to Puncak", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13022.7, 175.204, 26592.8)
+    end)
+    TeleportSection:NewButton("Bandung", "Tp to Bandung", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5270.04, 207.064, 27554.1)
+    end)
+    TeleportSection:NewButton("BSD", "Tp to BSD", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-26147.1, 23.3567, 14360.9)
+    end)
+    TeleportSection:NewButton("Bekasi", "Tp to Bekasi", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14909.7, 49.7486, 860.953)
+    end)
+    TeleportSection:NewButton("Sentul", "Tp to Sentul", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-16757.8, -18.1315, 18940.2)
+    end)
+    TeleportSection:NewButton("Modification", "Tp to Modification", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-17330, -16, 18813)
+    end)
+    TeleportSection:NewButton("BMW Dealer", "Tp to BMW Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21466, 30, 2064)
+    end)
+    TeleportSection:NewButton("Premium Dealer", "Tp to Premium Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25497, 26, 15253)
+    end)
+    TeleportSection:NewButton("Toyota Dealer", "Tp to Toyota Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21726, 23, 2661)
+    end)
+    TeleportSection:NewButton("TruckBus Dealer", "Tp to TruckBus", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-14805, 50, 863)
+    end)
+    TeleportSection:NewButton("Wulling Dealer", "Tp to Wulling Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-25661, 21, 8959)
+    end)
+    TeleportSection:NewButton("Mitsubishi Dealer", "Tp to Mitsubishi Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21610, 23, 2491)
+    end)
+    TeleportSection:NewButton("Mercedes Dealer", "Tp to Mercedes Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-20680, 23, 1782)
+    end)
+    TeleportSection:NewButton("Misc Dealer", "Tp to Misc Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12333, 47, 1927)
+    end)
+    TeleportSection:NewButton("Lexus Dealer", "Tp to Lexus Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-21505, 22, 2316)
+    end)
+    TeleportSection:NewButton("Kia Dealer", "Tp to Kia Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-12589, 50, 1899)
+    end)
+    TeleportSection:NewButton("Hyundai Dealer", "Tp to Hyundai Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13023, 48, 1910)
+    end)
+    TeleportSection:NewButton("Honda Dealer", "Tp to Honda Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-4300, 217, 28137)
+    end)
+    TeleportSection:NewButton("Classic Dealer", "Tp to Classic Dealer", function(s)
+        print("Clicked")
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-5135, 206, 27449)
+    end)
+
+    
+--- All Stack End
+end
